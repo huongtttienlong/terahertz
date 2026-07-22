@@ -881,7 +881,7 @@ details p{margin:14px 0 0;font-size:15.5px}
 
 <div class="zoom" id="zoom" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to">
   <button class="zoom-x" id="zoomX" aria-label="Đóng">&times;</button>
-  <img id="zoomImg" src="" alt="">
+  <img id="zoomImg" alt="">
   <p class="zoom-cap" id="zoomCap"></p>
 </div>
 
@@ -902,7 +902,7 @@ details p{margin:14px 0 0;font-size:15.5px}
   }
   function close() {
     box.classList.remove('on');
-    big.src = '';
+    big.removeAttribute('src');
     document.body.style.overflow = '';
   }
 
