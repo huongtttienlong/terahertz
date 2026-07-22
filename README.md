@@ -1,6 +1,6 @@
-# Landing page – Máy trị liệu sóng ánh sáng Terahertz
+# Landing page – Máy làm ấm sóng ánh sáng Terahertz
 
-Trang giới thiệu và bán sỉ máy trị liệu sóng ánh sáng Terahertz cho **spa dưỡng sinh Đông Y**.
+Trang giới thiệu và bán sỉ Máy làm ấm sóng ánh sáng Terahertz cho **spa dưỡng sinh Đông Y**.
 
 **Liên hệ:** Mr Sáng – 0981 933 233 · https://zalo.me/0981933233
 
@@ -62,7 +62,7 @@ Bốn điều dưới đây là sự thật về mô hình hiện tại. Trang c
 | Không có | Trang phải nói gì |
 |---|---|
 | ❌ Bảo hành | Nói rõ không bảo hành, đổi lại giá mềm. Có chạy thử + quay video đóng gói trước khi gửi |
-| ❌ Đào tạo | Không cử người xuống spa. Chỉ gửi phác đồ trị liệu dạng file in được |
+| ❌ Đào tạo | Không cử người xuống spa. Chỉ gửi quy trình chăm sóc dạng file in được |
 | ❌ Bán trực tiếp | Chỉ bán online, không showroom, không cho xem hàng trước |
 | ❌ Hoá đơn | Không nhắc hoá đơn VAT, CO–CQ, hồ sơ nhập khẩu ở bất kỳ đâu |
 
