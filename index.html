@@ -118,6 +118,11 @@ table{border-collapse:collapse}
 .hero h1 em{font-style:normal;color:var(--gold-light)}
 .hero .eyebrow{text-align:left;color:var(--gold-light)}
 .hero-sub{font-size:18px;color:rgba(255,255,255,.9);margin-bottom:26px;max-width:580px}
+.hero-price{display:inline-flex;align-items:center;gap:22px;background:rgba(0,0,0,.24);border:1px solid rgba(233,200,116,.45);border-radius:16px;padding:18px 26px;margin-top:26px}
+.hero-price small{display:block;font-size:13px;color:rgba(255,255,255,.75);letter-spacing:.5px;margin-bottom:2px}
+.hero-price b{font-family:'Playfair Display',serif;font-size:clamp(24px,3.4vw,32px);color:var(--gold-light);line-height:1.1}
+.hero-price-sep{font-size:24px;color:rgba(233,200,116,.6)}
+@media(max-width:420px){.hero-price{gap:14px;padding:14px 18px}}
 .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin:24px 0 30px}
 .hero-badges span{background:rgba(255,255,255,.12);border:1px solid rgba(233,200,116,.35);padding:8px 16px;border-radius:999px;font-size:14px;font-weight:500}
 .hero-cta{display:flex;gap:14px;flex-wrap:wrap}
@@ -179,6 +184,19 @@ table{border-collapse:collapse}
 .proto td:first-child{font-weight:700;color:var(--burgundy);white-space:nowrap}
 .note{font-size:14.5px;color:var(--ink-soft);margin-top:22px}
 
+/* ---------- Countdown hoàn vốn ---------- */
+.countdown{display:grid;grid-template-columns:repeat(6,1fr);gap:12px;margin-bottom:14px}
+.cd-item{background:var(--white);border:1px solid rgba(184,137,43,.3);border-radius:14px;padding:18px 10px;text-align:center;box-shadow:var(--shadow)}
+.cd-item b{display:block;font-family:'Playfair Display',serif;font-size:30px;color:var(--ink-soft);line-height:1}
+.cd-item small{display:block;font-size:12.5px;color:var(--ink-soft);margin-top:8px;line-height:1.45}
+.cd-done{background:var(--burgundy);border-color:var(--burgundy)}
+.cd-done b,.cd-done small{color:var(--white)}
+.cd-profit{background:var(--gold);border-color:var(--gold)}
+.cd-profit b,.cd-profit small{color:var(--ink)}
+.cd-profit small,.cd-done small{font-weight:700}
+.center{text-align:center}
+@media(max-width:760px){.countdown{grid-template-columns:repeat(3,1fr)}}
+
 /* ---------- ROI ---------- */
 .roi-card{border:2px solid var(--gold)}
 .roi-row{display:flex;justify-content:space-between;gap:16px;padding:13px 0;border-bottom:1px dashed rgba(184,137,43,.3);font-size:16px}
@@ -194,6 +212,23 @@ table{border-collapse:collapse}
 .spec-row span:first-child{color:var(--ink-soft)}
 .spec-row span:last-child{font-weight:600;text-align:right;color:var(--ink)}
 @media(max-width:800px){.spec-grid{grid-template-columns:1fr}}
+
+/* ---------- Versus ---------- */
+.versus{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:30px}
+.vs-col{background:var(--white);border:1px solid rgba(184,137,43,.22);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+.vs-col--win{border:2px solid var(--burgundy);box-shadow:var(--shadow-strong)}
+.vs-head{background:var(--burgundy);color:var(--white);font-family:'Be Vietnam Pro',sans-serif;font-weight:700;font-size:16px;padding:14px 22px;text-align:center}
+.vs-head--grey{background:#9c9086}
+.vs-col ul{list-style:none;padding:22px 24px;margin:0}
+.vs-col li{padding:11px 0 11px 28px;position:relative;font-size:15.5px;color:var(--ink-soft);border-bottom:1px dashed rgba(184,137,43,.24)}
+.vs-col li:last-child{border-bottom:none}
+.vs-col li::before{content:"✕";position:absolute;left:0;color:#b0a396;font-weight:700}
+.vs-col--win li::before{content:"✓";color:var(--gold)}
+.vs-col--win li{color:var(--ink)}
+@media(max-width:800px){.versus{grid-template-columns:1fr}}
+.kit-note{background:var(--burgundy);color:var(--white);border-radius:var(--radius);padding:30px}
+.kit-note p{color:rgba(255,255,255,.92);font-size:16.5px}
+.kit-note b{color:var(--gold-light)}
 
 /* ---------- Packages ---------- */
 .pack{display:flex;flex-direction:column;position:relative}
@@ -280,8 +315,8 @@ details p{margin:14px 0 0;font-size:15.5px}
     <nav class="nav">
       <a href="#cong-nghe">Công nghệ</a>
       <a href="#dong-y">Ứng dụng Đông Y</a>
-      <a href="#quy-trinh">Quy trình spa</a>
-      <a href="#bang-gia">Giá sỉ</a>
+      <a href="#loi-nhuan">Hoàn vốn</a>
+      <a href="#bang-gia">Giá &amp; tài liệu</a>
       <a href="#minh-bach">Cần biết trước khi mua</a>
     </nav>
     <a href="#dang-ky" class="btn">Nhận báo giá sỉ</a>
@@ -294,7 +329,18 @@ details p{margin:14px 0 0;font-size:15.5px}
     <div>
       <span class="eyebrow">Dành riêng cho spa dưỡng sinh Đông Y</span>
       <h1>Máy Trị Liệu Sóng Ánh Sáng <em>Terahertz</em> &mdash; Nâng Cấp Toàn Bộ Dịch Vụ Dưỡng&nbsp;Sinh</h1>
-      <p class="hero-sub">Thiết bị thổi sóng Terahertz thế hệ mới, kết hợp <b>sóng Terahertz &ndash; công nghệ lượng tử &ndash; ống thạch anh quang học</b>. Hỗ trợ làm ấm kinh lạc, thư giãn cơ và tăng cảm nhận lưu thông khí huyết cho khách hàng, chỉ trong 20 phút mỗi liệu&nbsp;trình.</p>
+      <p class="hero-sub">Máy <b>750.000đ</b>. Spa bán <b>150.000đ một buổi 20 phút</b>. Đến vị khách thứ năm là Anh/Chị đã lấy lại vốn &mdash; từ khách thứ sáu trở đi, mỗi ca chỉ tốn khoảng <b>1.000đ tiền điện</b>.</p>
+      <div class="hero-price">
+        <div>
+          <small>Giá một máy</small>
+          <b>750.000đ</b>
+        </div>
+        <div class="hero-price-sep">→</div>
+        <div>
+          <small>Hoàn vốn sau</small>
+          <b>5 lượt khách</b>
+        </div>
+      </div>
       <div class="hero-badges">
         <span>Công suất 1.000W &ndash; 1.500W</span>
         <span>3 chế độ gió &ndash; nhiệt</span>
@@ -319,7 +365,7 @@ details p{margin:14px 0 0;font-size:15.5px}
     <div><b>20 phút</b><small>Thời gian một liệu trình chuẩn</small></div>
     <div><b>3 trong 1</b><small>Terahertz &middot; Lượng tử &middot; Thạch anh</small></div>
     <div><b>Toàn quốc</b><small>Bán online, giao tận nơi</small></div>
-    <div><b>3&ndash;4 tuần</b><small>Thời gian hoàn vốn dự kiến*</small></div>
+    <div><b>5 khách</b><small>Là hoàn vốn cả cái máy*</small></div>
   </div>
 </div>
 
@@ -451,29 +497,44 @@ details p{margin:14px 0 0;font-size:15.5px}
 <section class="section" id="loi-nhuan">
   <div class="container">
     <span class="eyebrow">Bài toán kinh doanh</span>
-    <h2 class="section-title">Một máy &mdash; bao lâu thì hoàn vốn?</h2>
-    <p class="section-sub">Con số dưới đây là ví dụ minh hoạ, Anh/Chị tự tính lại theo giá dịch vụ và lượng khách thực tế của cơ sở mình.</p>
-    <div class="grid-2" style="align-items:center">
+    <h2 class="section-title">750 nghìn bỏ ra. Vị khách thứ năm là Anh/Chị lấy lại đủ.</h2>
+    <p class="section-sub">Đây là lý do thật khiến spa nhập máy này, chứ không phải vì công nghệ nghe hay.</p>
+
+    <div class="countdown">
+      <div class="cd-item"><b>1</b><small>Khách<br>&minus;600.000đ</small></div>
+      <div class="cd-item"><b>2</b><small>Khách<br>&minus;450.000đ</small></div>
+      <div class="cd-item"><b>3</b><small>Khách<br>&minus;300.000đ</small></div>
+      <div class="cd-item"><b>4</b><small>Khách<br>&minus;150.000đ</small></div>
+      <div class="cd-item cd-done"><b>5</b><small>Khách<br>HOÀ VỐN</small></div>
+      <div class="cd-item cd-profit"><b>6+</b><small>Khách<br>LÃI HẾT</small></div>
+    </div>
+    <p class="note center" style="margin-bottom:44px">Tính với giá dịch vụ 150.000đ một buổi 20 phút &mdash; mức phổ biến, nhiều spa còn bán cao hơn.</p>
+
+    <div class="grid-2" style="align-items:start">
       <div class="card roi-card">
-        <div class="roi-row"><span>Giá bán dịch vụ lẻ (tham khảo)</span><b>150.000đ / 20 phút</b></div>
-        <div class="roi-row"><span>Số ca trung bình mỗi ngày</span><b>4 ca</b></div>
-        <div class="roi-row"><span>Doanh thu mỗi ngày</span><b>600.000đ</b></div>
-        <div class="roi-row"><span>Doanh thu tháng (26 ngày)</span><b>15.600.000đ</b></div>
-        <div class="roi-row"><span>Chi phí vận hành (điện + nhân công)</span><b>≈ 4.000.000đ</b></div>
+        <h3 style="margin-bottom:16px">Chi phí thật của mỗi ca</h3>
+        <div class="roi-row"><span>Tiền điện (1.000W chạy 20 phút)</span><b>≈ 1.000đ</b></div>
+        <div class="roi-row"><span>Tinh dầu, ngải, thảo dược</span><b>0đ</b></div>
+        <div class="roi-row"><span>Vật tư tiêu hao khác</span><b>0đ</b></div>
+        <div class="roi-row"><span>Giường, phòng (đã có sẵn)</span><b>0đ</b></div>
         <div class="roi-total">
-          <small>Lợi nhuận gộp ước tính mỗi tháng trên 1 máy</small>
-          <b>≈ 11.600.000đ</b>
-          <small>Vốn đầu tư một máy thu hồi trong khoảng 3&ndash;4 tuần vận hành</small>
+          <small>Anh/Chị thu 150.000đ, chi phí vật tư khoảng</small>
+          <b>1.000đ</b>
+          <small>Phần còn lại là công kỹ thuật viên và lãi</small>
         </div>
+        <p class="note" style="margin-bottom:0">So sánh: một ca xông ngải tốn 15.000&ndash;30.000đ tiền ngải, chưa kể 45 phút và mùi ám cả phòng.</p>
       </div>
       <div>
-        <h3 style="margin-bottom:14px">Ba cách spa đang đóng gói dịch vụ này</h3>
+        <h3 style="margin-bottom:14px">Ba cách bán, chọn cách nào cũng hoàn vốn trong tuần đầu</h3>
         <ul class="check">
-          <li><b>Bán lẻ theo buổi</b><span>120.000 &ndash; 200.000đ mỗi buổi 20 phút. Dễ bán thêm cho khách đã đến làm massage.</span></li>
-          <li><b>Bán liệu trình 10 buổi</b><span>1.200.000 &ndash; 1.800.000đ mỗi liệu trình. Thu tiền trước, giữ chân khách quay lại đều đặn.</span></li>
-          <li><b>Combo nâng cấp</b><span>Cộng thêm 80.000 &ndash; 100.000đ vào gói massage hoặc giác hơi sẵn có. Tỷ lệ khách đồng ý nâng cấp rất cao vì chi phí thêm nhỏ.</span></li>
+          <li><b>Bán lẻ theo buổi &mdash; 150.000đ</b><span>Hoàn vốn sau <b>5 khách</b>. Dễ bán thêm cho khách đã đến làm massage.</span></li>
+          <li><b>Combo nâng cấp &mdash; cộng thêm 80.000đ</b><span>Hoàn vốn sau <b>10 khách</b>. Cách dễ nhất: khách đang nằm sẵn rồi, chỉ hỏi thêm một câu.</span></li>
+          <li><b>Liệu trình 10 buổi &mdash; 1.200.000đ</b><span>Chỉ cần <b>1 khách duy nhất</b> chốt liệu trình là Anh/Chị đã lãi 450.000đ ngay ngày đầu.</span></li>
         </ul>
-        <p class="note">* Số liệu mang tính minh hoạ, phụ thuộc vị trí, giá dịch vụ và lượng khách của từng cơ sở. Đây không phải cam kết lợi nhuận.</p>
+        <div style="background:var(--cream-soft);border-left:5px solid var(--gold);border-radius:14px;padding:22px;margin-top:22px">
+          <p style="margin:0;font-size:16.5px"><b>Nói cho gọn:</b> rủi ro lớn nhất Anh/Chị chịu là 750.000đ. Bằng đúng một ca massage cho hai người. Còn nếu nó chạy được, nó chạy mãi.</p>
+        </div>
+        <p class="note">* Số liệu minh hoạ, phụ thuộc giá dịch vụ và lượng khách từng cơ sở. Không phải cam kết lợi nhuận.</p>
       </div>
     </div>
   </div>
@@ -511,48 +572,78 @@ details p{margin:14px 0 0;font-size:15.5px}
 <!-- ===== BẢNG GIÁ ===== -->
 <section class="section" id="bang-gia">
   <div class="container">
-    <span class="eyebrow">Chính sách sỉ</span>
-    <h2 class="section-title">Ba gói dành cho spa và nhà phân phối</h2>
-    <p class="section-sub">Giá chi tiết được gửi riêng qua Zalo sau khi xác nhận cơ sở kinh doanh. Chúng tôi <b>bảo vệ giá bán lẻ</b> và <b>giới hạn số đại lý theo khu vực</b>.</p>
+    <span class="eyebrow">Câu hỏi thẳng thắn</span>
+    <h2 class="section-title">&ldquo;750 nghìn thì tôi mua trên Shopee cũng được mà?&rdquo;</h2>
+    <p class="section-sub">Đúng ạ. Anh/Chị mua được. Nên em nói rõ điều này:</p>
+
+    <div class="versus">
+      <div class="vs-col">
+        <div class="vs-head vs-head--grey">Mua ở nơi khác</div>
+        <ul>
+          <li>Nhận được <b>một cái máy</b></li>
+          <li>Về tự mò xem thổi vào đâu, bao lâu</li>
+          <li>Tự nghĩ xem đặt tên dịch vụ là gì</li>
+          <li>Tự đoán nên bán bao nhiêu tiền</li>
+          <li>Tự viết bài đăng, tự nghĩ cách nói với khách</li>
+          <li>Máy nằm trong tủ sau 2 tuần vì không biết bán</li>
+        </ul>
+      </div>
+      <div class="vs-col vs-col--win">
+        <div class="vs-head">Mua ở đây &mdash; cùng giá</div>
+        <ul>
+          <li>Nhận được <b>một dịch vụ bán được tiền</b></li>
+          <li>Phác đồ 20 phút, in ra treo phòng là chạy</li>
+          <li>Menu dịch vụ và bảng giá soạn sẵn</li>
+          <li>Gợi ý định giá theo khu vực của Anh/Chị</li>
+          <li>30 bài Facebook + 10 kịch bản TikTok viết sẵn</li>
+          <li><b>Kịch bản kỹ thuật viên nói gì để khách chốt liệu trình</b></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="kit-note">
+      <p>Cái máy ai bán cũng như nhau, cùng một nhà máy làm ra. <b>Thứ quyết định Anh/Chị kiếm được tiền hay không nằm ở chỗ khác:</b> kỹ thuật viên nói câu gì khi khách hỏi &ldquo;cái này là gì&rdquo;, và nói câu gì để khách đang trả 150 nghìn đồng ý trả 1,2 triệu cho liệu trình.</p>
+      <p style="margin-bottom:0">Bộ tài liệu đó em soạn sẵn, <b>gửi kèm không tính thêm tiền</b>. Vì em bán được nhiều máy hay không phụ thuộc vào việc spa của Anh/Chị có bán được dịch vụ hay không.</p>
+    </div>
+
+    <h3 class="center" style="margin:52px 0 8px">Bảng giá</h3>
+    <p class="section-sub" style="margin-bottom:32px">Lấy càng nhiều giá càng tốt. Anh/Chị nhắn Zalo, em báo giá đúng số lượng.</p>
     <div class="grid-3">
       <div class="card pack">
-        <h3>Gói Trải Nghiệm</h3>
-        <p class="qty">01 &ndash; 04 máy</p>
-        <div class="price">Giá sỉ bậc 1<small>Liên hệ nhận báo giá</small></div>
+        <h3>Dùng thử</h3>
+        <p class="qty">1 máy</p>
+        <div class="price">750.000đ<small>Đúng bằng giá bán lẻ trên sàn</small></div>
         <ul>
-          <li>Chiết khấu bậc 1</li>
+          <li>Trọn bộ tài liệu bán hàng gửi kèm</li>
+          <li>Phác đồ trị liệu 20 phút, file in được</li>
           <li>Chạy thử và quay video đóng gói trước khi gửi</li>
-          <li>Phác đồ trị liệu 20 phút, bản file in được</li>
-          <li>Bộ ảnh sản phẩm để đăng bán</li>
           <li>Giao hàng toàn quốc</li>
         </ul>
-        <a href="#dang-ky" class="btn">Nhận báo giá</a>
+        <a href="#dang-ky" class="btn">Lấy 1 máy dùng thử</a>
       </div>
       <div class="card pack pack--hot">
-        <h3>Gói Đại Lý Spa</h3>
-        <p class="qty">05 &ndash; 19 máy</p>
-        <div class="price">Chiết khấu sâu<small>Ưu đãi tốt nhất cho chuỗi spa</small></div>
+        <h3>Spa nhiều giường</h3>
+        <p class="qty">3 &ndash; 9 máy</p>
+        <div class="price">Chiết khấu theo số lượng<small>Nhắn Zalo nhận giá</small></div>
         <ul>
-          <li>Chiết khấu bậc 2, tốt hơn hẳn bậc 1</li>
-          <li>Bộ 30 bài đăng Facebook và 10 kịch bản video TikTok viết sẵn</li>
-          <li>Mẫu menu dịch vụ và bảng giá gợi ý cho spa</li>
+          <li>Toàn bộ quyền lợi gói 1 máy</li>
+          <li>Chạy được nhiều giường cùng lúc, không để khách chờ</li>
           <li>Tư vấn định giá dịch vụ theo khu vực của Anh/Chị</li>
-          <li>Phác đồ trị liệu 20 phút, bản file in được</li>
+          <li>Gợi ý cách xếp combo với dịch vụ spa đang có</li>
           <li>Ưu tiên giữ hàng khi hết kho</li>
         </ul>
-        <a href="#dang-ky" class="btn">Đăng ký làm đại lý</a>
+        <a href="#dang-ky" class="btn">Nhận giá tốt nhất</a>
       </div>
       <div class="card pack">
-        <h3>Gói Phân Phối Vùng</h3>
-        <p class="qty">Từ 20 máy</p>
-        <div class="price">Giá tốt nhất<small>Độc quyền theo tỉnh hoặc khu vực</small></div>
+        <h3>Chuỗi &amp; bán lại</h3>
+        <p class="qty">Từ 10 máy</p>
+        <div class="price">Giá tốt nhất<small>Nhắn Zalo trao đổi trực tiếp</small></div>
         <ul>
           <li>Giá tốt nhất hệ thống</li>
-          <li>Độc quyền khu vực có ký cam kết</li>
-          <li>Hỗ trợ ngân sách marketing</li>
-          <li>Toàn bộ quyền lợi của gói Đại Lý Spa</li>
-          <li>Ưu tiên nguồn hàng khi vào mùa cao điểm</li>
-          <li>Chính sách công nợ theo thoả thuận</li>
+          <li>Dành cho chuỗi nhiều cơ sở hoặc bán lại cho spa khác</li>
+          <li>Toàn bộ tài liệu được dùng lại cho các cơ sở</li>
+          <li>Ưu tiên nguồn hàng mùa cao điểm</li>
+          <li>Chính sách riêng theo thoả thuận</li>
         </ul>
         <a href="#dang-ky" class="btn">Trao đổi trực tiếp</a>
       </div>
@@ -618,11 +709,11 @@ details p{margin:14px 0 0;font-size:15.5px}
     </details>
     <details>
       <summary>Tôi lấy 1 máy về dùng thử trước được không?</summary>
-      <p>Được. Gói Trải Nghiệm cho phép nhập từ 1 máy với giá sỉ bậc 1. Nhiều spa dùng thử 2&ndash;3 tuần rồi mới nhập lô lớn, chúng tôi khuyến khích cách làm này.</p>
+      <p>Được, và em khuyến khích Anh/Chị làm vậy. 750.000đ cho một máy, dùng thử 2&ndash;3 tuần với khách quen trước. Thấy khách phản hồi tốt thì nhắn em lấy thêm, giá theo số lượng. Không ai bắt Anh/Chị ôm cả lô ngay từ đầu.</p>
     </details>
     <details>
-      <summary>Có bị vỡ giá khi nhiều nơi cùng bán không?</summary>
-      <p>Chúng tôi <b>giới hạn số đại lý theo khu vực</b> và có cam kết giá bán lẻ tối thiểu khi ký hợp tác. Đại lý phá giá sẽ bị ngừng cấp hàng.</p>
+      <summary>Máy này trên mạng bán đầy, khách tự mua về dùng thì sao?</summary>
+      <p>Có khách tự mua ạ, em không giấu. Nhưng thực tế đa số mua về thổi vài hôm rồi cất tủ, vì <b>không biết thổi vào đâu, bao lâu, theo thứ tự nào</b>.<br><br>Cái Anh/Chị bán không phải cái máy &mdash; là <b>20 phút có người làm đúng phác đồ cho họ</b>, trong phòng yên tĩnh, có người hỏi cảm nhận. Cũng giống như nồi lẩu ai cũng mua được, mà quán lẩu vẫn đông ạ.</p>
     </details>
     <details>
       <summary>Những ai không nên sử dụng?</summary>
@@ -635,15 +726,16 @@ details p{margin:14px 0 0;font-size:15.5px}
 <section class="section cta" id="dang-ky">
   <div class="container cta-grid">
     <div>
-      <span class="eyebrow">Đăng ký hợp tác</span>
-      <h2>Nhận bảng giá sỉ và bộ tài liệu kinh doanh miễn phí</h2>
-      <p>Anh/Chị để lại thông tin, Mr Sáng sẽ gọi lại trong vòng 30 phút (giờ hành chính) để tư vấn đúng mô hình spa của mình.</p>
+      <span class="eyebrow">Nhận trước, quyết định sau</span>
+      <h2>Xem trọn bộ tài liệu trước &mdash; thấy dùng được rồi hãy đặt hàng</h2>
+      <p>Anh/Chị để lại số, Mr Sáng gửi <b>toàn bộ tài liệu qua Zalo trước</b>, không cần đặt cọc, không cần cam kết gì. Xem thấy spa mình dùng được thì mình nói chuyện tiếp.</p>
       <ul>
-        <li>Bảng giá sỉ theo từng bậc số lượng</li>
-        <li>Phác đồ trị liệu 20 phút, bản file in được</li>
-        <li>Bộ 30 bài đăng và 10 kịch bản video bán hàng</li>
+        <li>Phác đồ trị liệu 20 phút, in ra treo phòng là chạy được</li>
+        <li>Kịch bản kỹ thuật viên tư vấn và chốt liệu trình tại quầy</li>
+        <li>30 bài đăng Facebook + 10 kịch bản video TikTok viết sẵn</li>
         <li>Mẫu menu dịch vụ và bảng giá cho spa</li>
-        <li>Tư vấn định giá dịch vụ theo khu vực của Anh/Chị</li>
+        <li>Gợi ý định giá theo khu vực của Anh/Chị</li>
+        <li>Video máy chạy thật và bảng giá theo số lượng</li>
       </ul>
       <a class="hotline" href="tel:0981933233">Hotline / Zalo: Mr Sáng &ndash; 0981 933 233</a>
     </div>
