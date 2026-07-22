@@ -208,12 +208,21 @@ table{border-collapse:collapse}
 .roi-total small{font-size:14px;color:rgba(255,255,255,.85)}
 
 /* ---------- Gallery ---------- */
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.gallery figure{margin:0;background:var(--white);border:1px solid rgba(184,137,43,.22);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
-.gallery img{width:100%;height:300px;object-fit:cover;object-position:center 42%;display:block}
-.gallery figcaption{padding:18px 20px;font-size:14.5px;color:var(--ink-soft);line-height:1.6}
-.gallery figcaption b{display:block;color:var(--burgundy);font-size:16px;margin-bottom:4px}
-@media(max-width:860px){.gallery{grid-template-columns:1fr;max-width:420px;margin:0 auto}.gallery img{height:340px}}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.gallery figure{margin:0;background:var(--white);border:1px solid rgba(184,137,43,.22);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column}
+.gallery img{width:100%;height:250px;object-fit:cover;object-position:center 45%;display:block;cursor:zoom-in;transition:transform .25s}
+.gallery figure:hover img{transform:scale(1.04)}
+.gallery figcaption{padding:16px 18px;font-size:14px;color:var(--ink-soft);line-height:1.55;flex:1}
+.gallery figcaption b{display:block;color:var(--burgundy);font-size:15.5px;margin-bottom:4px}
+@media(max-width:1000px){.gallery{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.gallery{grid-template-columns:1fr;max-width:380px;margin:0 auto}.gallery img{height:300px}}
+
+/* phong to anh */
+.zoom{position:fixed;inset:0;z-index:200;background:rgba(20,12,8,.94);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.zoom.on{display:flex}
+.zoom img{max-width:100%;max-height:82vh;width:auto;border-radius:12px;box-shadow:0 24px 60px rgba(0,0,0,.6)}
+.zoom-cap{position:absolute;left:0;right:0;bottom:26px;text-align:center;color:var(--gold-light);font-size:15px;padding:0 24px}
+.zoom-x{position:absolute;top:18px;right:22px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.35);color:#fff;font-size:22px;line-height:1;cursor:pointer}
 
 /* ---------- Specs ---------- */
 .spec-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:0 44px}
@@ -558,22 +567,24 @@ details p{margin:14px 0 0;font-size:15.5px}
     <p class="section-sub">Ảnh cắt từ video quay máy thật. Anh/Chị xem kỹ trước khi quyết định, vì bên em bán online không cho xem hàng trực tiếp.</p>
 
     <div class="gallery">
-      <figure>
-        <img src="assets/may-terahertz-4-muc.jpg" width="640" height="1137" loading="lazy"
-             alt="Vòng xoay chỉnh mức và 4 đèn báo trên thân máy Terahertz">
-        <figcaption><b>Vòng xoay chỉnh mức</b>Dãy đèn báo 0&ndash;1&ndash;2&ndash;3 ngay trên thân, kỹ thuật viên liếc là biết đang ở mức nào.</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/may-terahertz-dau-thoi.jpg" width="640" height="1137" loading="lazy"
-             alt="Đầu thổi bằng kim loại với các khe thoát khí của máy Terahertz">
-        <figcaption><b>Đầu thổi kim loại</b>Bốn khe thoát khí, bên trong là ống thạch anh. Đây là bộ phận quyết định chất lượng luồng thổi.</figcaption>
-      </figure>
-      <figure>
-        <img src="assets/may-terahertz-dang-chay.jpg" width="640" height="1137" loading="lazy"
-             alt="Máy Terahertz đang hoạt động, ánh sáng hắt lên tường">
-        <figcaption><b>Lúc đang chạy</b>Ánh sáng hắt ra rõ khi bật máy. Đây cũng là hình rất dễ quay video bán hàng cho spa.</figcaption>
-      </figure>
+      <figure><img src="assets/01-toan-than.jpg" width="720" height="1280" loading="lazy" alt="Toàn thân máy làm ấm Terahertz cầm trên tay">
+        <figcaption><b>Toàn thân máy</b>Thân đỏ, đầu bạc. Dài cỡ một gang tay rưỡi, cầm gọn một tay.</figcaption></figure>
+      <figure><img src="assets/02-goc-nghieng.jpg" width="720" height="1280" loading="lazy" alt="Máy Terahertz nhìn nghiêng thấy thân và đầu thổi">
+        <figcaption><b>Nhìn nghiêng</b>Thân thuôn dần về phía tay cầm, không trơn tuột khi tay có dầu.</figcaption></figure>
+      <figure><img src="assets/03-dau-thoi.jpg" width="720" height="1280" loading="lazy" alt="Cận cảnh đầu thổi kim loại với bốn khe thoát khí">
+        <figcaption><b>Đầu thổi</b>Bốn khe thoát khí, bên trong là ống thạch anh. Bộ phận quyết định chất lượng luồng thổi.</figcaption></figure>
+      <figure><img src="assets/04-vong-xoay-den.jpg" width="720" height="1280" loading="lazy" alt="Vòng xoay chỉnh mức và dãy đèn báo 0-1-2-3">
+        <figcaption><b>Vòng xoay chỉnh mức</b>Đèn báo 0&ndash;1&ndash;2&ndash;3 ngay trên thân, kỹ thuật viên liếc là biết đang ở mức nào.</figcaption></figure>
+      <figure><img src="assets/05-dang-chay.jpg" width="720" height="1280" loading="lazy" alt="Máy Terahertz đang chạy, đèn sáng trên thân">
+        <figcaption><b>Lúc bật máy</b>Đèn báo sáng rõ, nhìn được cả trong phòng để tối.</figcaption></figure>
+      <figure><img src="assets/06-anh-sang.jpg" width="720" height="1280" loading="lazy" alt="Ánh sáng từ đầu thổi hắt lên tường khi máy chạy">
+        <figcaption><b>Ánh sáng phát ra</b>Hắt rõ lên tường khi bật. Hình này rất dễ quay video bán hàng cho spa.</figcaption></figure>
+      <figure><img src="assets/07-than-may.jpg" width="720" height="1280" loading="lazy" alt="Chỗ nối giữa thân đỏ và đầu bạc của máy">
+        <figcaption><b>Chỗ nối thân và đầu</b>Đường ghép liền, không hở. Đây là chỗ hay lỏng ở hàng kém chất lượng.</figcaption></figure>
+      <figure><img src="assets/08-day-nguon.jpg" width="720" height="819" loading="lazy" alt="Dây nguồn rời và phích cắm hai chấu tròn kèm theo máy">
+        <figcaption><b>Dây nguồn kèm theo</b>Dây rời, phích hai chấu tròn, cắm thẳng vào ổ điện thường ở Việt Nam.</figcaption></figure>
     </div>
+    <p class="note center">Bấm vào ảnh để phóng to. Ảnh cắt từ video quay máy thật, không chỉnh sửa ngoài việc tăng nhẹ độ sáng.</p>
 
     <h3 class="center" style="margin:52px 0 8px">Thông số kỹ thuật</h3>
     <p class="section-sub" style="margin-bottom:32px">Mỗi máy đều được chạy thử và quay video đóng gói trước khi gửi đi.</p>
@@ -833,6 +844,43 @@ details p{margin:14px 0 0;font-size:15.5px}
   <a class="zalo" href="https://zalo.me/0981933233" title="Chat Zalo với Mr Sáng">Zalo</a>
   <a class="call" href="tel:0981933233" title="Gọi Mr Sáng">Gọi</a>
 </div>
+
+<div class="zoom" id="zoom" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to">
+  <button class="zoom-x" id="zoomX" aria-label="Đóng">&times;</button>
+  <img id="zoomImg" src="" alt="">
+  <p class="zoom-cap" id="zoomCap"></p>
+</div>
+
+<script>
+(function () {
+  var box = document.getElementById('zoom'),
+      big = document.getElementById('zoomImg'),
+      cap = document.getElementById('zoomCap');
+
+  function open(fig) {
+    var img = fig.querySelector('img'),
+        title = fig.querySelector('figcaption b');
+    big.src = img.getAttribute('src');
+    big.alt = img.alt;
+    cap.textContent = title ? title.textContent : '';
+    box.classList.add('on');
+    document.body.style.overflow = 'hidden';
+  }
+  function close() {
+    box.classList.remove('on');
+    big.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.gallery figure').forEach(function (fig) {
+    fig.querySelector('img').addEventListener('click', function () { open(fig); });
+  });
+  box.addEventListener('click', close);
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') close();
+  });
+})();
+</script>
 
 </body>
 </html>
