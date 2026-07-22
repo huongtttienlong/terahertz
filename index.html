@@ -161,15 +161,15 @@ table{border-collapse:collapse}
 @media(max-width:600px){.steps{grid-template-columns:1fr}}
 
 /* ---------- Bảo đảm khi nhận hàng ---------- */
-.bao-dam{background:rgba(233,200,116,.1);border:1px solid rgba(233,200,116,.45);border-radius:var(--radius);padding:30px;margin-top:32px}
-.bao-dam h3{color:var(--gold-light);font-size:20px;margin-bottom:20px;text-align:center}
+.bao-dam{background:var(--white);border:2px solid var(--gold);border-radius:var(--radius);padding:32px;margin-top:40px;box-shadow:var(--shadow)}
+.bao-dam h3{color:var(--burgundy);font-size:22px;margin-bottom:22px;text-align:center}
 .bd-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
-.bd-grid>div{padding-left:34px;position:relative}
-.bd-grid>div::before{content:"✓";position:absolute;left:0;top:1px;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--ink);font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
-.bd-grid b{display:block;color:var(--white);font-size:16.5px;margin-bottom:6px}
-.bd-grid p{color:rgba(255,255,255,.85);font-size:15.5px;margin:0}
-.bd-note{margin:22px 0 0;padding-top:18px;border-top:1px dashed rgba(233,200,116,.35);font-size:15px;color:rgba(255,255,255,.8)}
-.bd-note b{color:var(--gold-light)}
+.bd-grid>div{padding-left:36px;position:relative}
+.bd-grid>div::before{content:"✓";position:absolute;left:0;top:1px;width:26px;height:26px;border-radius:50%;background:var(--gold);color:var(--white);font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.bd-grid b{display:block;color:var(--burgundy);font-size:16.5px;margin-bottom:6px}
+.bd-grid p{color:var(--ink-soft);font-size:15.5px;margin:0}
+.bd-note{margin:24px 0 0;padding-top:18px;border-top:1px dashed rgba(184,137,43,.4);font-size:14.5px;color:var(--ink-soft)}
+.bd-note b{color:var(--burgundy)}
 @media(max-width:800px){.bd-grid{grid-template-columns:1fr;gap:20px}}
 
 /* ---------- Check list ---------- */
@@ -706,6 +706,21 @@ details p{margin:14px 0 0;font-size:15.5px}
         <a href="https://zalo.me/0981933233" class="btn">Nhắn Zalo nhận giá</a>
       </div>
     </div>
+
+    <div class="bao-dam">
+      <h3>Trả tiền rồi mới được mở hộp? Không phải ở đây.</h3>
+      <div class="bd-grid">
+        <div>
+          <b>Được mở kiểm tra và cắm thử khi nhận</b>
+          <p>Anh/Chị mở hộp, cắm điện, bật thử ngay trước mặt shipper. Không ưng thì không nhận, không mất đồng nào.</p>
+        </div>
+        <div>
+          <b>Máy lỗi lúc nhận &rarr; đổi cái mới 1 đổi 1</b>
+          <p>Cắm vào không lên, thổi không ra hơi, đầu thổi nứt vỡ &mdash; bên em đổi máy khác, không bắt sửa, không trừ tiền.</p>
+        </div>
+      </div>
+      <p class="bd-note">Nói cho rõ để không hiểu nhầm: <b>đây là đổi hàng lỗi lúc nhận, không phải bảo hành.</b> Máy chạy ổn lúc nhận rồi vài tháng sau mới hỏng thì bên em không đổi được ạ.</p>
+    </div>
   </div>
 </section>
 
@@ -719,7 +734,7 @@ details p{margin:14px 0 0;font-size:15.5px}
       <div class="step">
         <b>ĐIỀU 1</b>
         <h3>Không bảo hành dài hạn</h3>
-        <p>Máy dùng được vài tháng rồi hỏng thì bên em không sửa, không đổi. Đổi lại, giá mềm hơn hẳn hàng có bảo hành 1&ndash;2 năm. <b>Riêng lỗi ngay lúc nhận hàng thì có đổi</b> &mdash; xem mục bên dưới.</p>
+        <p>Máy dùng được vài tháng rồi hỏng thì bên em không sửa, không đổi. Đổi lại, giá mềm hơn hẳn hàng có bảo hành 1&ndash;2 năm. <b>Riêng lỗi ngay lúc nhận hàng thì có đổi</b> &mdash; xem lại mục ngay dưới bảng giá.</p>
       </div>
       <div class="step">
         <b>ĐIỀU 2</b>
@@ -733,20 +748,6 @@ details p{margin:14px 0 0;font-size:15.5px}
       </div>
     </div>
 
-    <div class="bao-dam">
-      <h3>Bù lại, hai điều này Anh/Chị được đảm bảo</h3>
-      <div class="bd-grid">
-        <div>
-          <b>Được mở kiểm tra và cắm thử khi nhận</b>
-          <p>Không phải trả tiền rồi mới được mở hộp. Anh/Chị mở ra, cắm điện, bật thử ngay tại chỗ. Không ưng thì không nhận.</p>
-        </div>
-        <div>
-          <b>Máy lỗi lúc nhận &rarr; đổi cái mới 1 đổi 1</b>
-          <p>Cắm vào không lên, thổi không ra hơi, đầu thổi nứt vỡ &mdash; bên em đổi máy khác cho Anh/Chị, không bắt sửa, không trừ tiền.</p>
-        </div>
-      </div>
-      <p class="bd-note">Nói cho rõ để không hiểu nhầm: <b>đây là đổi hàng lỗi lúc nhận, không phải bảo hành.</b> Máy chạy ổn lúc nhận rồi vài tháng sau mới hỏng thì bên em không đổi được ạ.</p>
-    </div>
     <div style="background:rgba(0,0,0,.22);border:1px solid rgba(233,200,116,.35);border-radius:16px;padding:26px;margin-top:32px">
       <h3 style="color:var(--gold-light);margin-bottom:10px">Và điều quan trọng nhất</h3>
       <p style="color:rgba(255,255,255,.92);font-size:17px;margin:0">Đây là <b>thiết bị chăm sóc sức khoẻ, hỗ trợ thư giãn và làm ấm</b>. <b style="color:var(--gold-light)">Sản phẩm này không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh.</b> Nó không thay thế chẩn đoán, tư vấn hay phác đồ điều trị của bác sĩ.<br><br>Ngoài kia có nơi quảng cáo máy Terahertz chữa được tiểu đường, tim mạch, ung thư. Chúng tôi không nói vậy, và mong Anh/Chị cũng đừng nói vậy với khách của mình &mdash; vì người bị xử phạt sẽ là spa đăng nội dung đó.</p>
