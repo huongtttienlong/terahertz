@@ -61,9 +61,9 @@ Bốn điều dưới đây là sự thật về mô hình hiện tại. Trang c
 
 | Không có | Trang phải nói gì |
 |---|---|
-| ❌ Bảo hành | Nói rõ không bảo hành, đổi lại giá mềm. Có chạy thử + quay video đóng gói trước khi gửi |
+| ❌ Bảo hành **dài hạn** | Nói rõ không bảo hành dài hạn, đổi lại giá mềm. **Nhưng máy lỗi lúc nhận hàng thì đổi 1 đổi 1** — luôn tách rõ hai vế này, không được gọi 1 đổi 1 là "bảo hành" |
 | ❌ Đào tạo | Không cử người xuống spa. Chỉ gửi quy trình chăm sóc dạng file in được |
-| ❌ Bán trực tiếp | Chỉ bán online, không showroom, không cho xem hàng trước |
+| ❌ Showroom | Chỉ bán online, không cho ghé xem trước khi đặt. **Nhưng khách được mở kiểm tra và cắm thử khi nhận hàng** |
 | ❌ Hoá đơn | Không nhắc hoá đơn VAT, CO–CQ, hồ sơ nhập khẩu ở bất kỳ đâu |
 
 ## Khuyến cáo nội dung

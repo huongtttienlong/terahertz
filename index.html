@@ -160,6 +160,18 @@ table{border-collapse:collapse}
 @media(max-width:1000px){.steps{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:600px){.steps{grid-template-columns:1fr}}
 
+/* ---------- Bảo đảm khi nhận hàng ---------- */
+.bao-dam{background:rgba(233,200,116,.1);border:1px solid rgba(233,200,116,.45);border-radius:var(--radius);padding:30px;margin-top:32px}
+.bao-dam h3{color:var(--gold-light);font-size:20px;margin-bottom:20px;text-align:center}
+.bd-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.bd-grid>div{padding-left:34px;position:relative}
+.bd-grid>div::before{content:"✓";position:absolute;left:0;top:1px;width:24px;height:24px;border-radius:50%;background:var(--gold);color:var(--ink);font-size:14px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.bd-grid b{display:block;color:var(--white);font-size:16.5px;margin-bottom:6px}
+.bd-grid p{color:rgba(255,255,255,.85);font-size:15.5px;margin:0}
+.bd-note{margin:22px 0 0;padding-top:18px;border-top:1px dashed rgba(233,200,116,.35);font-size:15px;color:rgba(255,255,255,.8)}
+.bd-note b{color:var(--gold-light)}
+@media(max-width:800px){.bd-grid{grid-template-columns:1fr;gap:20px}}
+
 /* ---------- Check list ---------- */
 .check{list-style:none;padding:0;margin:0}
 .check li{padding:14px 0 14px 38px;border-bottom:1px dashed rgba(184,137,43,.3);position:relative;font-size:16px;color:var(--ink)}
@@ -322,7 +334,7 @@ details p{margin:14px 0 0;font-size:15.5px}
 
 <div class="topbar">
   <div class="container">
-    <span>Bán online &middot; <b>Miễn phí giao hàng toàn quốc</b> &middot; Tư vấn trực tiếp qua Zalo</span>
+    <span>Miễn phí giao hàng toàn quốc &middot; <b>Được kiểm tra và cắm thử khi nhận hàng</b> &middot; Máy lỗi đổi 1 đổi 1</span>
     <span>Tư vấn sỉ: <a href="tel:0981933233"><b>Mr Sáng &ndash; 0981 933 233</b></a></span>
   </div>
 </div>
@@ -364,6 +376,7 @@ details p{margin:14px 0 0;font-size:15.5px}
         <span>3 chế độ gió &ndash; nhiệt</span>
         <span>Ống thạch anh quang học</span>
         <span>Miễn phí giao hàng toàn quốc</span>
+        <span>Kiểm tra &amp; cắm thử khi nhận hàng</span>
       </div>
       <div class="hero-cta">
         <a href="#dang-ky" class="btn btn--gold">Nhận trọn bộ tài liệu bán hàng</a>
@@ -383,7 +396,7 @@ details p{margin:14px 0 0;font-size:15.5px}
   <div class="container trust-grid">
     <div><b>20 phút</b><small>Thời gian một liệu trình chuẩn</small></div>
     <div><b>3 trong 1</b><small>Terahertz &middot; Lượng tử &middot; Thạch anh</small></div>
-    <div><b>Miễn ship</b><small>Mọi đơn, giao tận nơi toàn quốc</small></div>
+    <div><b>1 đổi 1</b><small>Nếu máy lỗi lúc nhận hàng</small></div>
     <div><b>5 khách</b><small>Là hoàn vốn cả cái máy*</small></div>
   </div>
 </div>
@@ -564,7 +577,7 @@ details p{margin:14px 0 0;font-size:15.5px}
   <div class="container">
     <span class="eyebrow">Ảnh máy thật</span>
     <h2 class="section-title">Đây là máy Anh/Chị sẽ nhận &mdash; không phải ảnh mẫu</h2>
-    <p class="section-sub">Ảnh cắt từ video quay máy thật. Anh/Chị xem kỹ trước khi quyết định, vì bên em bán online không cho xem hàng trực tiếp.</p>
+    <p class="section-sub">Ảnh cắt từ video quay máy thật. Anh/Chị xem kỹ trước khi đặt, còn lúc nhận hàng thì được mở ra cắm thử trực tiếp.</p>
 
     <div class="gallery">
       <figure><img src="assets/01-toan-than.jpg" width="720" height="1280" loading="lazy" alt="Toàn thân máy làm ấm Terahertz cầm trên tay">
@@ -658,9 +671,10 @@ details p{margin:14px 0 0;font-size:15.5px}
         <div class="price">750.000đ<small>một máy &middot; đúng bằng giá lẻ trên sàn</small></div>
         <ul>
           <li><b>Miễn phí giao hàng toàn quốc</b></li>
+          <li><b>Được mở kiểm tra và cắm thử khi nhận hàng</b></li>
+          <li><b>Máy lỗi lúc nhận: đổi cái mới 1 đổi 1</b></li>
           <li>Trọn bộ tài liệu bán hàng gửi kèm</li>
           <li>Quy trình chăm sóc 20 phút, file in được</li>
-          <li>Chạy thử và quay video đóng gói trước khi gửi</li>
         </ul>
         <a href="#dang-ky" class="btn">Lấy 1 máy dùng thử</a>
       </div>
@@ -672,7 +686,7 @@ details p{margin:14px 0 0;font-size:15.5px}
           <li><b>Miễn phí giao hàng toàn quốc</b></li>
           <li>Toàn bộ quyền lợi gói 1 máy</li>
           <li>Chạy được hai giường cùng lúc, không để khách chờ</li>
-          <li><b>Vì sản phẩm không có bảo hành</b> nên có máy thứ hai là Anh/Chị không phải huỷ lịch khách khi một cái trục trặc</li>
+          <li><b>Vì không có bảo hành dài hạn</b> nên có máy thứ hai là Anh/Chị không phải huỷ lịch khách khi một cái trục trặc sau vài tháng</li>
           <li>Tư vấn định giá dịch vụ theo khu vực của Anh/Chị</li>
         </ul>
         <a href="#dang-ky" class="btn">Lấy 2 máy cho chắc</a>
@@ -703,8 +717,8 @@ details p{margin:14px 0 0;font-size:15.5px}
     <div class="grid-3">
       <div class="step">
         <b>ĐIỀU 1</b>
-        <h3>Không có bảo hành</h3>
-        <p>Sản phẩm này không áp dụng chế độ bảo hành. Đổi lại, giá mềm hơn hẳn hàng có bảo hành dài hạn. Mỗi máy đều được chạy thử và quay video đóng gói trước khi gửi đi.</p>
+        <h3>Không bảo hành dài hạn</h3>
+        <p>Máy dùng được vài tháng rồi hỏng thì bên em không sửa, không đổi. Đổi lại, giá mềm hơn hẳn hàng có bảo hành 1&ndash;2 năm. <b>Riêng lỗi ngay lúc nhận hàng thì có đổi</b> &mdash; xem mục bên dưới.</p>
       </div>
       <div class="step">
         <b>ĐIỀU 2</b>
@@ -714,8 +728,23 @@ details p{margin:14px 0 0;font-size:15.5px}
       <div class="step">
         <b>ĐIỀU 3</b>
         <h3>Chỉ bán online</h3>
-        <p>Không có showroom, không bán trực tiếp tại địa chỉ, không cho xem hàng trước. Toàn bộ trao đổi qua Zalo hoặc điện thoại, hàng giao tận nơi toàn quốc.</p>
+        <p>Không có showroom, không ghé xem hàng trước khi đặt. Toàn bộ trao đổi qua Zalo hoặc điện thoại. <b>Nhưng lúc nhận hàng thì Anh/Chị được mở ra kiểm tra và cắm thử</b> ngay trước mặt shipper.</p>
       </div>
+    </div>
+
+    <div class="bao-dam">
+      <h3>Bù lại, hai điều này Anh/Chị được đảm bảo</h3>
+      <div class="bd-grid">
+        <div>
+          <b>Được mở kiểm tra và cắm thử khi nhận</b>
+          <p>Không phải trả tiền rồi mới được mở hộp. Anh/Chị mở ra, cắm điện, bật thử ngay tại chỗ. Không ưng thì không nhận.</p>
+        </div>
+        <div>
+          <b>Máy lỗi lúc nhận &rarr; đổi cái mới 1 đổi 1</b>
+          <p>Cắm vào không lên, thổi không ra hơi, đầu thổi nứt vỡ &mdash; bên em đổi máy khác cho Anh/Chị, không bắt sửa, không trừ tiền.</p>
+        </div>
+      </div>
+      <p class="bd-note">Nói cho rõ để không hiểu nhầm: <b>đây là đổi hàng lỗi lúc nhận, không phải bảo hành.</b> Máy chạy ổn lúc nhận rồi vài tháng sau mới hỏng thì bên em không đổi được ạ.</p>
     </div>
     <div style="background:rgba(0,0,0,.22);border:1px solid rgba(233,200,116,.35);border-radius:16px;padding:26px;margin-top:32px">
       <h3 style="color:var(--gold-light);margin-bottom:10px">Và điều quan trọng nhất</h3>
@@ -743,12 +772,15 @@ details p{margin:14px 0 0;font-size:15.5px}
       <p>Thao tác không khó, xem quy trình là làm theo được. Nhưng em nói rõ: <b>bên em không tổ chức đào tạo</b>, không cử người xuống cơ sở. Cái Anh/Chị nhận được là <b>quy trình 20 phút dạng file in được</b> — treo trong phòng dưỡng sinh, kỹ thuật viên nhìn theo từng mốc thời gian mà làm. Nếu spa cần người cầm tay chỉ việc thì mô hình bên em chưa phục vụ được ạ.</p>
     </details>
     <details>
-      <summary>Có bảo hành không?</summary>
-      <p><b>Không ạ. Sản phẩm này không có bảo hành</b> — em nói thẳng ngay từ đầu để Anh/Chị cân nhắc, chứ không giấu để lúc máy hỏng mới nói.<br><br>Đổi lại, giá đã tính vào chuyện đó nên mềm hơn hẳn hàng có chế độ bảo hành. Trước khi gửi, mỗi máy đều được <b>chạy thử và quay video đóng gói</b>, Anh/Chị nhận video cùng mã vận đơn. Máy hỏng do lỗi sẵn có khi mở hộp, Anh/Chị quay video mở hàng gửi lại để hai bên cùng xem xét.<br><br>Nếu spa bắt buộc phải có bảo hành dài hạn, em khuyên Anh/Chị chọn nguồn hàng khác, để khỏi mất thời gian của cả hai bên.</p>
+      <summary>Có bảo hành không? Máy lỗi thì sao?</summary>
+      <p>Em tách rõ hai chuyện để Anh/Chị khỏi hiểu nhầm:<br><br>
+      <b>1. Máy lỗi ngay lúc nhận hàng &rarr; ĐỔI CÁI MỚI, 1 đổi 1.</b> Anh/Chị được mở hộp cắm thử ngay trước mặt shipper. Cắm không lên, thổi không ra hơi, đầu thổi nứt vỡ &mdash; báo em là đổi máy khác, không bắt sửa, không trừ tiền. Không ưng thì trả lại luôn, không nhận cũng được.<br><br>
+      <b>2. Máy dùng vài tháng rồi mới hỏng &rarr; KHÔNG có bảo hành.</b> Bên em không sửa, không đổi. Em nói thẳng ngay từ đầu chứ không giấu để lúc đó mới nói.<br><br>
+      Giá 750.000đ đã tính vào chuyện không bảo hành dài hạn nên mềm hơn hẳn hàng bảo hành 1&ndash;2 năm. Nếu spa bắt buộc phải có bảo hành dài hạn, em khuyên Anh/Chị chọn nguồn khác cho khỏi mất thời gian của cả hai bên.</p>
     </details>
     <details>
       <summary>Tôi xem hàng trực tiếp hoặc ghé kho được không?</summary>
-      <p>Dạ không ạ. Bên em <b>chỉ bán online</b>, không có showroom và không bán trực tiếp tại địa chỉ. Toàn bộ trao đổi qua Zalo hoặc điện thoại, hàng gửi tới tận nơi trên toàn quốc.</p>
+      <p>Ghé kho xem trước khi đặt thì không được ạ &mdash; bên em <b>chỉ bán online</b>, không có showroom. Toàn bộ trao đổi qua Zalo hoặc điện thoại.<br><br>Nhưng <b>lúc nhận hàng thì Anh/Chị được mở ra kiểm tra và cắm thử ngay trước mặt shipper</b>. Bật lên chạy thử, xem đầu thổi, xem đèn báo. Máy có vấn đề thì không nhận, hoặc báo em đổi cái mới.<br><br>Nói cách khác: Anh/Chị không phải trả tiền cho một cái hộp kín chưa biết bên trong thế nào.</p>
     </details>
     <details>
       <summary>Tôi lấy 1 máy về dùng thử trước được không?</summary>
@@ -779,6 +811,7 @@ details p{margin:14px 0 0;font-size:15.5px}
         <li>Mẫu menu dịch vụ và bảng giá cho spa</li>
         <li>Gợi ý định giá theo khu vực của Anh/Chị</li>
         <li>Video máy chạy thật và bảng giá theo số lượng</li>
+        <li>Hướng dẫn cách kiểm tra máy lúc nhận hàng</li>
       </ul>
       <a class="hotline" href="tel:0981933233">Hotline / Zalo: Mr Sáng &ndash; 0981 933 233</a>
     </div>
