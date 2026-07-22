@@ -55,8 +55,19 @@ Nếu cần lưu lead như dự án `thamdatrilieu`, phải chuyển từ static
 
 ---
 
+## Mô hình kinh doanh — ràng buộc khi sửa nội dung
+
+Bốn điều dưới đây là sự thật về mô hình hiện tại. Trang có hẳn một mục `#minh-bach` nói thẳng. **Khi sửa nội dung tuyệt đối không được hứa ngược lại:**
+
+| Không có | Trang phải nói gì |
+|---|---|
+| ❌ Bảo hành | Nói rõ không bảo hành, đổi lại giá mềm. Có chạy thử + quay video đóng gói trước khi gửi |
+| ❌ Đào tạo | Không cử người xuống spa. Chỉ gửi phác đồ trị liệu dạng file in được |
+| ❌ Bán trực tiếp | Chỉ bán online, không showroom, không cho xem hàng trước |
+| ❌ Hoá đơn | Không nhắc hoá đơn VAT, CO–CQ, hồ sơ nhập khẩu ở bất kỳ đâu |
+
 ## Khuyến cáo nội dung
 
-Toàn bộ câu chữ trên trang đã được viết theo hướng **không quảng cáo chữa bệnh**. Sản phẩm là thiết bị chăm sóc sức khoẻ, hỗ trợ thư giãn và làm ấm — không phải thuốc, không thay thế chẩn đoán và điều trị y khoa.
+Toàn bộ câu chữ trên trang đã được viết theo hướng **không quảng cáo chữa bệnh**. Sản phẩm là thiết bị chăm sóc sức khoẻ, hỗ trợ thư giãn và làm ấm — **không phải là thuốc và không có tác dụng thay thế thuốc chữa bệnh**, không thay thế chẩn đoán và điều trị y khoa.
 
 Khi sửa nội dung, **giữ nguyên nguyên tắc này**. Quảng cáo sản phẩm không phải thuốc mà gây hiểu nhầm có tác dụng chữa bệnh bị xử phạt theo Nghị định 38/2021 (30–40 triệu đồng).
